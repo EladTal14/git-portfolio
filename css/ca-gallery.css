@@ -84,7 +84,7 @@ body {
 .offcanvas-aside {
     position: fixed;
     height: 100%;
-    background: red;
+    background: rgb(194, 195, 214);
     width: 80vw;
     right: -80vw;
     z-index: 10;
@@ -106,11 +106,11 @@ body {
 
 @media (min-width: 575px) {
     .offcanvas-btn-open {
-        margin-right: 30vw;
+        margin-right: 50vw;
     }
     .offcanvas-aside {
-        width: 30vw;
-        right: -30vw;
+        width: 50vw;
+        right: -50vw;
     }
 }
 .offcanvas-aside-open {

@@ -8,7 +8,7 @@ jQuery(function () {
 function renderProjects() {
   var projects = getProjects();
   var strHTMLs = ''
-  projects.forEach(function (proj, idx) {
+  projects.forEach(function (proj) {
     strHTMLs += `
     <div class="col-md-4 col-sm-6 portfolio-item">
       <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1" onclick="renderModal('${proj.id}')">
@@ -69,4 +69,12 @@ function renderModal(projId) {
   var $elModal = $('#portfolioModal1')
   $elModal.html(modal);
   // console.log($elModal);
+}
+
+function onSubmitContact() {
+  // var $elName = $('input[name=name]')
+  var $elEmail = $('input[name=email]')
+  var $elSubject = $('input[name=subject]')
+  var $elMessage = $('input[name=message]')
+  window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${$elEmail.text()}&su=${$elSubject.text()}&body=${$elMessage.text()}`
 }
